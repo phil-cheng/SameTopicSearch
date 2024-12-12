@@ -1,0 +1,10 @@
+__pycache__
+bak
+build
+dist
+tmp
+.idea
+*.log
+*.xls
+*.spec
+venv
