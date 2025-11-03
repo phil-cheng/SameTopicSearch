@@ -26,6 +26,8 @@ def searchApi(keyword, filterDir, filterExt):
     headers = {"Content-Type": "application/json", "Accept": "application/json"}
     # 将数据转换为JSON字符串
     data_json = json.dumps(data, ensure_ascii=False)
+    # 打印将要发送的 JSON 参数（便于调试）
+    print("data_json:", data_json)
     # 发送POST请求
     response = requests.post(url, data=data_json, headers=headers)
     # 获取响应结果
