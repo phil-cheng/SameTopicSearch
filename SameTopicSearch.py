@@ -45,6 +45,7 @@ def topicMatch(matchDir, isSplit, sheet, copySheet):
     for row_idx in range(3, sheet.nrows):
         # 获取试题内容
         cellValue = sheet.cell(row_idx, topicColNum).value.strip()
+        cellValue = cellValue.replace("【图或公式丢失】","").replace("【图】","")
         # cell内没有数据则跳过
         if cellValue is None or cellValue == "":
             continue
@@ -73,6 +74,7 @@ def optionMatch(matchDir, isSplit, sheet, copySheet):
     for row_idx in range(3, sheet.nrows):
         # 获取试题内容
         cellValue = sheet.cell(row_idx, topicColNum).value.strip()
+        cellValue = cellValue.replace("【图或公式丢失】","").replace("【图】","")
         # cell内没有数据则跳过
         if cellValue is None or cellValue == "":
             continue
